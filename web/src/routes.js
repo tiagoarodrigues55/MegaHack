@@ -1,16 +1,16 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
-import Home from './components/Home'
+import Login from './components/Login/index'
+import Home from './components/Home/index'
+import Cadastro from './components/Cadastrar/index'
 
-function Routes() {
-  return (
-    <BrowserRouter>
-        <Switch>
-          <Route exact path="/Home" component={Home} />
-        </Switch>
-    </BrowserRouter>
-  )
-}
-
-export default Routes;
+export default  () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/Home" component={Home} />
+      <Route exact path="/Login" component={Login} />
+      <Route exact path="/Cadastro" component={Cadastro} />
+    </Switch>
+  </BrowserRouter>
+)
