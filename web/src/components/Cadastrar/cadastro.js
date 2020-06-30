@@ -26,17 +26,17 @@ export default function Cadastro(){
     //         matricula: data.matricula,
     //         senha: data.senha
     //       }
-    //       api.post('users', {
-    //         name: usuario.nome,
-    //         nometime: usuario.nomeTime,
-    //         email: usuario.email,
-    //         password: usuario.senha,
-    //         vivacoins: 100,
-    //         ultimapontuação: 0,
-    //         pontos: 0,
-    //         matricula: usuario.matricula
-    //       }).then(()=>{
-    //       alert('cadastrou!')
+          // api.post('users', {
+          //   name: usuario.nome,
+          //   nometime: usuario.nomeTime,
+          //   email: usuario.email,
+          //   password: usuario.senha,
+          //   vivacoins: 100,
+          //   ultimapontuação: 0,
+          //   pontos: 0,
+          //   matricula: usuario.matricula
+          // }).then(()=>{
+          // alert('cadastrou!')
     //       api.get('users').then(us=>{
     //         for(let a of us.data){
     //           if(a.email===usuario.email){

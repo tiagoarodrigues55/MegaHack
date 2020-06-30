@@ -7,6 +7,9 @@ import styled from 'styled-components'
 export default function Input({name, ...rest}) {
   const inputRef = useRef(null)
   const { fieldName, registerField, defaultValue} = useField(name)
+  // const fieldName = useField(name).fieldName
+  // const registerField = useField(name).registerField
+  // const defaultValue = useField(name).defaultValue
 
   useEffect(()=>{
     registerField({
