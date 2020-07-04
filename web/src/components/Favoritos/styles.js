@@ -32,12 +32,12 @@ border: 2px solid rgba(164, 191, 188, 0.2);
 border-radius: 6px;
 overflow: hidden;
 margin-top: 12px;
-margin-bottom: 17px;
 position: relative;
 
 :first-child {
     margin-left: 32px;
 }
+
 
 :not(:first-child) {
     margin-left: 24px;
@@ -74,4 +74,3 @@ img {
     margin-top: 4px;
 }
 `
-
