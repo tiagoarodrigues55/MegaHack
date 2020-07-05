@@ -45,7 +45,9 @@ function Home() {
                 <div className="card-img-wrp">
                   <img src={temp_url} alt="" />
                 </div>
-                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                <Link to={"Curso"}>
+                  <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                </Link>
                 <div className="fav-btn">
                   <button>
                     <MdFavoriteBorder style={{ color: "#2F98EA" }} size={24} />
@@ -57,7 +59,9 @@ function Home() {
                 <div className="card-img-wrp">
                   <img src={temp_url} alt="" />
                 </div>
-                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                <Link to={"Curso"}>
+                  <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                </Link>
                 <div className="fav-btn">
                   <button>
                     <MdFavoriteBorder style={{ color: "#2F98EA" }} size={24} />
@@ -77,7 +81,9 @@ function Home() {
                 <div className="card-img-wrp">
                   <img src={temp_url} alt="" />
                 </div>
-                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                <Link to={"Curso"}>
+                  <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                </Link>
                 <div className="fav-btn">
                   <button>
                     <MdFavoriteBorder style={{ color: "#2F98EA" }} size={24} />
@@ -89,7 +95,9 @@ function Home() {
                 <div className="card-img-wrp">
                   <img src={temp_url} alt="" />
                 </div>
-                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                <Link to={"Curso"}>
+                  <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                </Link>
                 <div className="fav-btn">
                   <button>
                     <MdFavoriteBorder style={{ color: "#2F98EA" }} size={24} />
@@ -101,7 +109,9 @@ function Home() {
                 <div className="card-img-wrp">
                   <img src={temp_url} alt="" />
                 </div>
-                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                <Link to={"Curso"}>
+                  <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                </Link>
                 <div className="fav-btn">
                   <button>
                     <MdFavoriteBorder style={{ color: "#2F98EA" }} size={24} />

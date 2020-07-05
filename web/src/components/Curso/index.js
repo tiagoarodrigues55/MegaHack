@@ -4,7 +4,7 @@ import api from "../../server/api"
 export default () => {
 
     const [files, setFiles] = useState([
-        {nome: "nome curso", url: ""}
+        {name: "nome curso", url: ""}
     ])
     api.get('dados').then(res => {
         setFiles(res.data)
