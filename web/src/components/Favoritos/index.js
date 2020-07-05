@@ -2,7 +2,6 @@
 import React from 'react';
 import { Container, CardShape } from './styles'
 import Header from '../Header/header'
-import SlideMenu from "../Slide-menu/slide-menu"
 import { MdFavorite } from "react-icons/md"
 import { HeaderStyle } from "../Header/styleHead"
 
@@ -13,7 +12,6 @@ function Favoritos() {
 
     return (
         <>
-            <SlideMenu />
 
             <HeaderStyle>
 
@@ -29,7 +27,7 @@ function Favoritos() {
                                 <h2 className="course-title">Curso básico de primeiros socorros</h2>
                                 <div className="fav-btn">
                                     <button>
-                                        <MdFavorite style={{ color: "#000040" }} size={21} />
+                                        <MdFavorite style={{ color: "#2F98EA" }} size={21} />
                                     </button>
                                 </div>
                             </CardShape>
@@ -41,23 +39,10 @@ function Favoritos() {
                                 <h2 className="course-title">Curso básico de primeiros socorros</h2>
                                 <div className="fav-btn">
                                     <button>
-                                        <MdFavorite style={{ color: "#000040" }} size={21} />
+                                        <MdFavorite style={{ color: "#2F98EA" }} size={21} />
                                     </button>
                                 </div>
                             </CardShape>
-
-                            <CardShape>
-                                <div className="card-img-wrp">
-                                    <img src={temp_url} alt="" />
-                                </div>
-                                <h2 className="course-title">Curso básico de primeiros socorros</h2>
-                                <div className="fav-btn">
-                                    <button>
-                                        <MdFavorite style={{ color: "#000040" }} size={21} />
-                                    </button>
-                                </div>
-                            </CardShape>
-
 
                         </div>
                     </div>
