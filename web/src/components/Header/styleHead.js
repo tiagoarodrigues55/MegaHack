@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import "./TEMA.png"
+
 
 export const HeaderStyle = styled.div`
 width: 100%;
@@ -69,7 +71,8 @@ height: 100%;
 .slide-theme {
     display: flex;
     max-height: 137px;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUY8uSYhSCGb654ebdpn-_TUadf0C9hGqhZg&usqp=CAU');
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 36%, rgba(0,212,255,1) 100%);
 
 }
 

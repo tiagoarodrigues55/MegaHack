@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
-import Cadastro from './cadastro'
-import Styles from './styles'
+// import Cadastro from './cadastro'
+// import Styles from './styles'
 
-export default ()=>{
+// export default ()=>{
   
-    return (
-      <Styles>
-        <Cadastro />
-      </Styles>
-    )
-  }
+//     return (
+//       <Styles>
+//         <Cadastro />
+//       </Styles>
+//     )
+//   }
 

@@ -15,7 +15,7 @@ export default () => {
                         <li>
                             <div className="notif-card">
                                 <div className="img-wrp">
-                                    <img src={process.env.PUBLIC_URL + "/assets/notif-example.png"} alt="" />
+                                    <img src={process.env.PUBLIC_URL + "/assets/notif-example.png"} alt="img da notif" />
                                 </div>
                                 <div className="notif-info">
                                     <h4>Você tem um novo curso disponível.</h4>
