@@ -19,33 +19,26 @@ const db = new sqlite3.Database(
     }
 )
 
-function definirTipo(minetype){
-    if(minetype == 'image/jpeg' || 'image/pjpeg'
-    || 'image/png' || 'image/gif') return 2;
-    else if(minetype == 'file/pdf') return 1;
-    else return 4 
-}
-
 routes.post("/dados",  multer(multerConfig).single("file"), async (req, res,next) =>{
     const query = /*sql*/`
-        INSERT INTO Dados(nome,url,tipo,modo)
-        VALUES (?,?,?,?)`
-    
-    const tipo = definirTipo(req.file.mimetype);
-        
-    db.run(query,[req.file.originalname, req.file.path,tipo,'1'], err=>{
+        INSERT INTO Dados (Nome,URL,TipoArq,Categoria,Modo)
+                  VALUES (?,?,?,?,? );`
+
+   const tipo = req.file.mimetype.split("/")
+   db.run(query,[req.file.originalname, req.file.path, tipo[1], req.body.categoria, "dowloand" ], err=>{
         if(err){
             return next(err)
         }
         return req.file;
-    })  
-    return res.json("Upload realizado com sucesso")
+    }) 
+    return res.json("Arquivo inserido com sucesso")
 });
 
 routes.get("/dados", async(req, res, next) =>{
     const query  = /*sql*/`
-     SELECT id, nome, url
-     FROM dados; `
+     SELECT Id,Nome,URL,TipoArq,Categoria,Modo
+     FROM Dados;
+    `
     db.all(query, [], (err, dados) => {
         if (err) {
             throw err
@@ -54,11 +47,13 @@ routes.get("/dados", async(req, res, next) =>{
     })
 })
 
-routes.get("/dados", async(req, res, next) =>{
+// get por modo de arquivo
+routes.get("/modo", async(req, res, next) =>{
     const query  = /*sql*/`
-     SELECT id, nome, url
-     FROM dados; `
-    db.all(query, [], (err, dados) => {
+    SELECT Id,Nome,URL,TipoArq,Categoria
+    FROM Dados WHERE Modo = ?; `
+
+    db.all(query,req.body.modo, function (err, dados) {
         if (err) {
             throw err
         }
@@ -66,13 +61,28 @@ routes.get("/dados", async(req, res, next) =>{
     })
 })
 
+
+// get por categoria de arquivo
+routes.get("/cursoCategoria", async(req, res, next) =>{
+    const query  = /*sql*/`
+    SELECT Id,Nome,URL,TipoArq,Categoria, Modo
+    FROM Dados WHERE Categoria = ?; `
+ 
+    db.all(query,req.body.categoria, function (err, dados) {
+        if (err) {
+            throw err
+        }
+        return res.json(dados)
+    })
+})
+
+//Atualizar nome e categoria 
 routes.put("/dados/:id", (req, res,next) => {
     const query = /*sql*/`
-       UPDATE Dados
-       SET nome = ?
-       WHERE id = ?`
+       UPDATE Dados SET Nome = ?, Categoria = ?
+      WHERE Id = ? `
   
-  db.run(query,[req.body.nome,req.params.id], function (err){
+  db.run(query,[req.body.nome, req.body.categoria,req.params.id], function (err){
       if(err){
          return next(err)
      }
@@ -82,7 +92,6 @@ routes.put("/dados/:id", (req, res,next) => {
      else{
          return res.sendStatus(404)
      }
-       
     })  
 })
 
@@ -90,16 +99,16 @@ routes.delete("/dados/:id", (req, res) =>{
     let url 
     const query  = /*sql*/`
       DELETE FROM Dados
-      WHERE id = ?;
+      WHERE Id = ?;
     `
     const parametro = req.params.id
 
-    db.each(`SELECT  url FROM Dados
+    db.each(`SELECT  URL FROM Dados
     WHERE id = ?`, parametro, (err, dados) => {
         if (err) {
             throw err
         }
-        url = dados.url
+        url = dados.URL
     })
     db.run(query,parametro,function(err) {
         if (err) {
