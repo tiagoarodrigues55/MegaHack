@@ -9,6 +9,8 @@ import {
 import { Link } from 'react-router-dom'
 
 
+
+
 class Header extends Component {
 
   constructor(props) {
@@ -21,9 +23,12 @@ class Header extends Component {
     this.setState({ isHidden: !this.state.isHidden });
   }
 
-
+ 
   render() {
+
+
     return (
+      
       <>
 
         <Bgmenu onClick={this.handleClick}
@@ -32,7 +37,7 @@ class Header extends Component {
             <div className="slide-theme">
 
               <div className="img-wrp">
-                <img src={process.env.PUBLIC_URL + "assets/avatar-serg.png"} alt="" />
+                <img src={process.env.PUBLIC_URL + "assets/avatar-serg.png"} alt="avatar" />
               </div>
               <div className="user-inf">
                 <p>Sergio Martins</p>

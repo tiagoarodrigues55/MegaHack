@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import {Form} from '@unform/web'
-import Input from '../Login/input'
-import { useHistory} from 'react-router-dom'
+// import React, { useEffect, useState } from 'react'
+// import {Form} from '@unform/web'
+// import Input from '../Login/input'
+// import { useHistory} from 'react-router-dom'
 // import api from '../services/api'
 
 
-export default function Cadastro(){
-  const history = useHistory()
-  function handleSubmit(data){
+// export default function Cadastro(){
+//   const history = useHistory()
+//   function handleSubmit(data){
     // if(data.senha === data.confirmSenha){
     //   //confirmação da matricula
     //   api.get('users').then(us=>{
@@ -63,18 +63,18 @@ export default function Cadastro(){
 
     // }
     
-  }
+  // }
 
-    return (
-      <div>
-        <Form onSubmit={handleSubmit}>
-        <Input placeholder="Nome Completo" name="nome"/>
-        <Input placeholder="email" type="email" name="email"/>
-        <Input placeholder="senha" type="password" name="senha"/>
-        <Input placeholder="Confirmar Senha" type="password" name="confirmSenha"/>
-        <button type="submit" >Enviar</button>
-        </Form>
-      </div>
-    )
-  }
+  //   return (
+  //     <div>
+  //       <Form onSubmit={handleSubmit}>
+  //       <Input placeholder="Nome Completo" name="nome"/>
+  //       <Input placeholder="email" type="email" name="email"/>
+  //       <Input placeholder="senha" type="password" name="senha"/>
+  //       <Input placeholder="Confirmar Senha" type="password" name="confirmSenha"/>
+  //       <button type="submit" >Enviar</button>
+  //       </Form>
+  //     </div>
+  //   )
+  // }
 

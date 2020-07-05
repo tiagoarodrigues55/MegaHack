@@ -4,8 +4,9 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 
 import { UserInfo, Biography, Platforms, PlatCard, Courses } from './styles'
 
-import { Line, Circle } from 'rc-progress';
+import { Line } from 'rc-progress'
 
+// import PieChart from './chart'
 import Header from "../Header/header"
 import { HeaderStyle } from "../Header/styleHead"
 
@@ -23,7 +24,7 @@ function Dashboard() {
         <Header />
         <UserInfo>
           <div className="img-wrp">
-            <img src={process.env.PUBLIC_URL + "assets/avatar-serg.png"} alt="" />
+            <img src={process.env.PUBLIC_URL + "assets/avatar-serg.png"} alt="avatar" />
           </div>
           <div className="user-inf">
             <h2>Sergio Martins</h2>
@@ -68,6 +69,7 @@ function Dashboard() {
           <li>RPN</li>
           <li>Inspeção</li>
         </ul>
+        {/* <PieChart/> */}
         <Courses>
           <h4>Cursos</h4>
 

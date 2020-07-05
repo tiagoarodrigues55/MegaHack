@@ -59,9 +59,11 @@ export default function Login() {
           </div>
           <p className="rec-pass">Esqueceu sua senha ?</p>
 
-          <button type="submit" >ENTRAR</button>
+          <button type="submit" >
+            <Link style={{color: "#fff"}} to={'Home'}>ENTRAR</Link>
+            </button>
         </Form>
-        <Link to="Cadastro">Cadastre-se</Link>
+        {/* <Link to="Cadastro">Cadastre-se</Link> */}
 
 
       </div>

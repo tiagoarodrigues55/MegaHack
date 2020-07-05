@@ -4,11 +4,10 @@ import { Container, CardShape } from './styles'
 import Header from '../Header/header'
 import { MdFavorite } from "react-icons/md"
 import { HeaderStyle } from "../Header/styleHead"
+import { Link } from "react-router-dom"
 
 
 function Favoritos() {
-
-    const temp_url = "https://images.unsplash.com/photo-1564144573017-8dc932e0039e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
 
     return (
         <>
@@ -22,9 +21,11 @@ function Favoritos() {
                         <div className="cards-list">
                             <CardShape>
                                 <div className="card-img-wrp">
-                                    <img src={temp_url} alt="" />
+                                    <img src={process.env.PUBLIC_URL + "/assets/cursbasic1.png"} alt="img do curso" />
                                 </div>
-                                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                                <Link to={"Curso"}>
+                                    <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                                </Link>
                                 <div className="fav-btn">
                                     <button>
                                         <MdFavorite style={{ color: "#2F98EA" }} size={21} />
@@ -34,9 +35,11 @@ function Favoritos() {
 
                             <CardShape>
                                 <div className="card-img-wrp">
-                                    <img src={temp_url} alt="" />
+                                    <img src={process.env.PUBLIC_URL + "/assets/rebocador-1.png"} alt="img do curso" />
                                 </div>
-                                <h2 className="course-title">Curso básico de primeiros socorros</h2>
+                                <Link to={"Curso"}>
+                                    <h2 className="course-title">Rebocador ASD 2411</h2>
+                                </Link>
                                 <div className="fav-btn">
                                     <button>
                                         <MdFavorite style={{ color: "#2F98EA" }} size={21} />
