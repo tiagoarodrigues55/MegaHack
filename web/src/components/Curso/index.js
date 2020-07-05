@@ -9,7 +9,8 @@ import { Link } from 'react-router-dom'
 export default () => {
 
     const [files, setFiles] = useState([
-        { nome: "nome curso", url: "assets/cursbasic1.png" }
+        {name: "nome curso", url: ""}
+
     ])
     api.get('dados').then(res => {
         setFiles(res.data)

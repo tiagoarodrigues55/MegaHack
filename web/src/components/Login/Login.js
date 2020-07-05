@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom'
 export default function Login() {
   const history = useHistory()
   function handleSubmit(data) {
-    const email = data.email
-    const senha = data.senha
+    history.push('/home')
+
+    // const email = data.email
+    // const senha = data.senha
     // api.get('users').then(usuarios=>{
     //   var emails = []
     //   var senhas = []
@@ -31,7 +33,7 @@ export default function Login() {
     //     }
 
     //     //redirecionar para a pg inicial
-    //     history.push('/index')
+        // history.push('/index')
 
     //   }else{
     //     alert('Senha incorreta')

@@ -33,7 +33,9 @@ function Home() {
                 </Link>
                 <div className="fav-btn">
                   <button>
+
                     <MdFavorite style={{ color: "#2F98EA" }} size={24} />
+
                   </button>
                 </div>
               </CardShape>
@@ -43,7 +45,9 @@ function Home() {
                   <img src={process.env.PUBLIC_URL + "/assets/Group 12.png"} alt="img do curos" />
                 </div>
                 <Link to={"Curso"}>
+
                   <h2 className="course-title">Prevenção COVID 19</h2>
+
                 </Link>
                 <div className="fav-btn">
                   <button>
@@ -64,7 +68,9 @@ function Home() {
                   <img src={process.env.PUBLIC_URL + "/assets/segumar.png"} alt="img do curso" />
                 </div>
                 <Link to={"Curso"}>
+
                   <h2 className="course-title">Prevenção e Segurança de acidentes no Mar</h2>
+
                 </Link>
                 <div className="fav-btn">
                   <button>
@@ -78,7 +84,9 @@ function Home() {
                   <img src={process.env.PUBLIC_URL + "/assets/msproj.png"} alt="img do curso" />
                 </div>
                 <Link to={"Curso"}>
+
                   <h2 className="course-title">Curso de MS Project</h2>
+
                 </Link>
                 <div className="fav-btn">
                   <button>
@@ -92,7 +100,9 @@ function Home() {
                   <img src={process.env.PUBLIC_URL + "/assets/gestproc.png"} alt="img do curso" />
                 </div>
                 <Link to={"Curso"}>
+
                   <h2 className="course-title">Gestão de Processos</h2>
+
                 </Link>
                 <div className="fav-btn">
                   <button>
