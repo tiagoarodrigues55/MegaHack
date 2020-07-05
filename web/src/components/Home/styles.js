@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-height: 100%;
+height: 100vh;
 width: 100%;
 margin-top: 10px;
+overflow-y: scroll;
 /* margin-left: 30px; */
 
+:last-child {
+    /* padding-bottom: 30px; */
+}
 
 h2 {
     margin-left: 32px;
@@ -14,9 +18,9 @@ h2 {
     color: #004F8C;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width:0;
-}
+} */
 .cards-list {
     width: 100%;
     display: flex;
@@ -72,6 +76,7 @@ img {
     background: transparent;
     margin-right: 18px;
     margin-top: 4px;
+    color: "#000040";
 }
 `
 
