@@ -6,7 +6,8 @@ O projeto "EDUCANAUTA" procura atender a necessidade de instruir os trabalhadore
 
 Principais Bibliotecas:
 
-Frontend: ReactJS, styled-components
-Backend: Sqlite3, MULTER e Express
+Frontend: ReactJS e styled-components.
+
+Backend: Sqlite3, MULTER e Express.
 
 
