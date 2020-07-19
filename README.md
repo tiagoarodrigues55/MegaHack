@@ -11,3 +11,4 @@ Frontend: ReactJS e styled-components.
 Backend: Sqlite3, MULTER e Express.
 
 
+![Gif-Educanauta](https://github.com/tiagoarodrigues55/MegaHack/blob/master/educanautaGif1.gif)
