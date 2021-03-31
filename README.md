@@ -4,7 +4,7 @@
 </h1>
 
 
-<h2 align="center">Happy - Mega Hack 3</h2>
+<h2 align="center">Educanauta - Mega Hack 3</h2>
 <p align="center">	
   
   <img alt="NPM" src="https://img.shields.io/npm/v/npm?color=10&logo=10">
